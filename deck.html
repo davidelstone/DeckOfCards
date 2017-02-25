@@ -1,0 +1,80 @@
+<doctype !html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script
+			  src="https://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="card">
+                <svg
+                    viewBox="0 0 245 275"
+                    width="100%"
+                    height="100%">
+                    <use id="card_image" xlink:href="svg-cards-indented.svg#back" x="40" y="12" fill="#800000" />
+                </svg>
+            </div>
+            <button id="deal">Deal</button><br />
+            <button id="shuffle">Shuffle</button>
+            <div id="deck"></div>
+        </div>
+    <script>
+        var suits = ['diamond', 'club', 'spade', 'heart'];
+        var numerals = {'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10, 'jack': 10, 'queen': 10, 'king': 10};
+        var deck = [];
+        
+        function shuffle() {
+            deck = []
+            var j = 0;
+            var k = 0;
+            var temp = null;
+            
+            for (i = 0; i < suits.length; i++) {
+                $.each(numerals, function(numeral, value) {
+                    deck.push(numeral + '_' + suits[i]);
+                })
+            
+            for (j = deck.length - 1; j > 0; j--) {
+                k = Math.floor(Math.random() * (j + 1))
+                temp = deck[j];
+                deck[j] = deck[k];
+                deck[k] = temp;
+            }
+
+            $('#card_image').attr("xlink:href","svg-cards-indented.svg#back");
+        }
+        }
+
+        $(document).ready(function() {
+            shuffle();
+        })
+
+        $('#shuffle').click(function() {
+                shuffle();                  
+            })
+
+        $('#deal, #card_image').click(function() {
+            if (deck.length == 0) {
+                $('#card_image').attr("xlink:href","svg-cards-indented.svg#back");
+            }
+            else {
+                card = deck.pop()
+        
+                switch (card.split("_").pop()) {
+                    case 'spade':
+                    case 'club':
+                        $('#card_image').attr("fill","#000000");
+                        break;
+                }
+                $('#card_image').attr("xlink:href","svg-cards-indented.svg#" + card);
+            }
+            
+            
+        })
+    </script>
+    </body>
+</html>
