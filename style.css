@@ -15,7 +15,7 @@ button {
 }
 
 #container {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
@@ -39,6 +39,7 @@ button {
     bottom: -100px;
     width: 200px;
     height: 200px;
+    cursor: pointer;
     color: #fff;
     background-color: #111;
     -webkit-transform: rotate(45deg);
