@@ -65,6 +65,13 @@ $(document).ready(function() {
     shuffle();
 })
 
+$('body').keyup(function(event) {
+    if (event.keyCode == 32) {
+        // Spacebar
+        deal();
+    }
+})
+
 $('#reset_corner').click(function() {
     shuffle();
 })
