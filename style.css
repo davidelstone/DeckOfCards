@@ -35,13 +35,13 @@ button {
 
 #reset_corner {
     position: fixed;
-    right: -100px;
-    bottom: -100px;
-    width: 200px;
-    height: 200px;
+    right: -200px;
+    bottom: -200px;
+    width: 400px;
+    height: 400px;
     cursor: pointer;
     color: #fff;
-    background-color: #111;
+    background-color: #111111;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -51,9 +51,9 @@ button {
 
 #reset_corner p {
     position: fixed;
-    right: 140px;
-    bottom: 55px;
-    font-size: 24px;
+    right: 280px;
+    bottom: 110px;
+    font-size: 48px;
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -61,13 +61,3 @@ button {
     -o-transform: rotate(-90deg);    
 }
 
-@media screen and (orientation: portrait) {
-    
-#reset_corner {
-    right: -200px;
-    bottom: -200px;
-    width: 400px;
-    height: 400px;
-}            
-    
-}
