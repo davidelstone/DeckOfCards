@@ -27,3 +27,33 @@ button {
     font-size: 48px;
 }
 
+#reset_corner_container {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+#reset_corner {
+    position: fixed;
+    right: -100px;
+    bottom: -100px;
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    background-color: #111;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+#reset_corner p {
+    position: fixed;
+    right: 140px;
+    bottom: 55px;
+    font-size: 24px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);    
+}

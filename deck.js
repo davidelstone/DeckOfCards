@@ -58,10 +58,14 @@ function resetImage() {
 }
 
 function updateDeck() {
-    $('#deck').html(dealt + " cards dealt, " + remain + " left to go.")
+    $('#deck').html(dealt + " cards dealt, " + remain + " left.")
 }
 
 $(document).ready(function() {
+    shuffle();
+})
+
+$('#reset_corner').click(function() {
     shuffle();
 })
 
