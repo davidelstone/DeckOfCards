@@ -42,7 +42,7 @@ button {
     cursor: pointer;
     color: #fff;
     background-color: #111;
-    transform: rotate(-90deg);
+    transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -59,4 +59,15 @@ button {
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);    
+}
+
+@media screen and (orientation: portrait) {
+    
+#reset_corner {
+    right: -200px;
+    bottom: -200px;
+    width: 400px;
+    height: 400px;
+}            
+    
 }
