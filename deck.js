@@ -76,6 +76,6 @@ $('#reset_corner').click(function() {
     shuffle();
 })
 
-$('#card_image').click(function() {
+$('#card').click(function() {
     deal();    
 })
