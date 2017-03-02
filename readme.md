@@ -2,6 +2,8 @@
 
 A simple, shuffleable deck of cards which can be 'dealt' one by one. Designed to be used for 'Deck of cards' workouts.
 
+Works on latest modern web & mobile browsers. No IE support.
+
 ## What's a 'Deck of cards' workout?
 
 You pick four unique bodyweight exercises and assign each one to a suit. 
